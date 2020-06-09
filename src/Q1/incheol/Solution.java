@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Solution {
     public String solution(String[] participant, String[] completion) {
-        String answer = " ";
+        String answer = "   ";
         Arrays.sort(participant);
         Arrays.sort(completion);
         int i =0;      //a
