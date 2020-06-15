@@ -7,8 +7,7 @@ public class Solution {
         quickSort(participant, 0, participant.length - 1);
         quickSort(completion, 0, completion.length - 1);
 
-        int lastCompletionName = participant.length - 1;
-        String answer = participant[lastCompletionName];
+        String answer = participant[participant.length - 1];
 
         for (int i = 0; i < completion.length; i++) {
             if (!participant[i].equals(completion[i])) {
