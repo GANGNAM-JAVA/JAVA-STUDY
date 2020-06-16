@@ -38,7 +38,6 @@ public class Camouflage2 {
         // stream 사용하면 시간이 훨씬 더 걸림. for문의 경우 평균 0.80ms, stream쓰면 평균 3ms
         //answer = countByCategory.values().stream().reduce(1, (a,b) -> a * (b + 1));
 
-        // 경우의 수 조합
         // 반복문2 : O(N)
         for(Map.Entry<String, Integer> entry : countByCategory.entrySet()) {
             answer *= entry.getValue() + 1;
