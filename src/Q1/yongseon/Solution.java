@@ -6,12 +6,12 @@ class Solution {
     public String solution(String[] participant, String[] completion) {
         HashMap<String, Integer> participantsMap = new HashMap<String, Integer>();
         
-        for (String pt : participant) {
-            participantsMap.put(pt, participantsMap.getOrDefault(pt, 0) + 1);
+        for (String participantName : participant) {
+            participantsMap.put(participantName, participantsMap.getOrDefault(participantName, 0) + 1);
         }
         
-        for (String cmp : completion) {
-            participantsMap.put(cmp, participantsMap.get(cmp) + 1);
+        for (String completionName : completion) {
+            participantsMap.put(completionName, participantsMap.get(completionName) + 1);
         }
         
         for (Map.Entry<String, Integer> entry : participantsMap.entrySet()) {
