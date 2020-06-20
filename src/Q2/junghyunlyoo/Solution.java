@@ -36,7 +36,6 @@ public class Solution {
             answer *= (value + 1);
         }
 
-
         //아무것도 착용하지 않은 경우 제외
         return --answer;
     }
