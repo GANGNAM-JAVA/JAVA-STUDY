@@ -77,3 +77,4 @@ fabric.properties
 .idea/sonarlint/
 .idea/vcs.xml
 java-study.iml
+/.project
