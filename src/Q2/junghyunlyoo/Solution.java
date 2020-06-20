@@ -35,6 +35,7 @@ public class Solution {
             //모든 착용 케이스 계산
             answer *= (value + 1);
         }
+        //test
 
         //아무것도 착용하지 않은 경우 제외
         return --answer;
