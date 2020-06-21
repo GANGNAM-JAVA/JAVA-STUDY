@@ -6,7 +6,7 @@
  * 캐시된 맵에서 완주한 사람을 제거 (참가자 명단에 완주한 사람이 포함되어 있으므로 -1)
  */
 
-package incompletePlayer;
+package Q1.kyunhhee;
 
 import java.util.HashMap;
 import java.util.Map;
