@@ -22,7 +22,7 @@ public class Solution {
         //기능 배열 중, 배포 우선순위가 가장 높은 기능의 위치
         int needDeployProgressindex = 0;
 
-        //모든 기능이 배포될 때까지 반복 -> O(?)
+        //모든 기능이 배포될 때까지 반복 -> O(??)
         while (needDeployProgressindex < PROGRESSES_CNT) {
             //배포가 필요한 모든 기능들 작업 진행 -> O(n)
             for (int i = needDeployProgressindex; i < PROGRESSES_CNT; i++) {
@@ -30,7 +30,7 @@ public class Solution {
                     progresses[i] += speeds[i];
                 }
             }
-            //배포 대상 기능 추출 -> O(?)
+            //배포 대상 기능 추출 -> O(??)
             int deployProgressesCnt = 0;
             while (FINISH <= progresses[needDeployProgressindex]) {
                 needDeployProgressindex++;
@@ -46,6 +46,13 @@ public class Solution {
             }
         }
 
-        return progressesCntsByDeploy.stream().mapToInt(i -> i).toArray();
+        //int array -> 1.3 ~ 1.7 ms
+        //stream -> 5 ~ 7 ms
+        int[] answer = new int[progressesCntsByDeploy.size()];
+        for (int i = 0; i < progressesCntsByDeploy.size(); i++) {
+            answer[i] = progressesCntsByDeploy.get(i);
+        }
+        return answer;
+        //return progressesCntsByDeploy.stream().mapToInt(i -> i).toArray();
     }
 }
