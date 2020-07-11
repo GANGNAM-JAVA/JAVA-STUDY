@@ -1,30 +1,25 @@
 package Q4.incheol;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Collections;
+import java.util.PriorityQueue;
 
 /**
  * @author Incheol Jung
  */
 public class Solution {
     public int solution(int[] priorities, int location) {
-        Integer[] tempArr = new Integer[priorities.length];
         int answer = 1;
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>(Collections.reverseOrder());
 
-        for(int i = 0; i < priorities.length; i++){
-            tempArr[i] = priorities[i];
-        }
+        for(int task : priorities)
+            priorityQueue.add(task);
 
-        Arrays.sort(tempArr, Comparator.reverseOrder());
-
-
-        for(int i = 0; i < tempArr.length; i++){
-            if(tempArr[i] > priorities[location]) {
-                answer++;
-            }else{
-                if(tempArr[i] == priorities[location]){
-                    if(i == location) break;
-                    else answer++;
+        while(!priorityQueue.isEmpty()) {
+            for(int i = 0; i < priorities.length; i++) {
+                if(priorityQueue.peek() == priorities[i]) {
+                    if(i == location) return answer;
+                    priorityQueue.poll();
+                    answer++;
                 }
             }
         }
