@@ -1,3 +1,5 @@
+package Q1.jisoo;
+
 import java.util.*;
 
 class Solution {
