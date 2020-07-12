@@ -18,7 +18,7 @@ public class Solution {
         Arrays.sort(sortedPriorities, Comparator.reverseOrder());
 
         for(int i = 0; i < sortedPriorities.length; i++){
-            for(int j = 0; j <priorities.length; j++){
+            for(int j = 0; j < priorities.length; j++){
                 if(sortedPriorities[i] == priorities[j]){
                     if(j == location) return answer;
                     answer++;
@@ -32,7 +32,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int count = sol.solution(new int[] {1, 1, 9, 1, 1, 1}, 0);
+        int count = sol.solution(new int[] {2,2,2,1,3,4}, 3);
 
         System.out.println(count);
     }
