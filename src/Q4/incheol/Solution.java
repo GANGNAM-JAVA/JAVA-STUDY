@@ -17,7 +17,7 @@ public class Solution {
 
         Arrays.sort(sortedPriorities, Comparator.reverseOrder());
 
-        for(int i = 0; i < sortedPriorities.length; i++){
+        for(int i = 0; i < sortedPriorities.length;){
             for(int j = 0; j < priorities.length; j++){
                 if(sortedPriorities[i] == priorities[j]){
                     if(j == location) return answer;
