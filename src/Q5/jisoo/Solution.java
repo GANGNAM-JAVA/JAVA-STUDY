@@ -11,7 +11,7 @@ public class Solution {
     }
     public static int solution(String arrangement) {
         int answer = 0;
-        Stack<Character> s = new Stack<>();
+        Stack<Character> 괄호체크용스택 = new Stack<>();
         for(int i=0 ; i<arrangement.length() ; i++) {
             char ch = arrangement.charAt(i);
 
@@ -19,17 +19,17 @@ public class Solution {
             if(i < arrangement.length() - 1) {
                 char ch2 = arrangement.charAt(i+1);
                 if(ch == '(' && ch2 == ')') {
-                    answer += s.size();
+                    answer += 괄호체크용스택.size();
                     i++;
                     continue;
                 }
             }
 
             if(ch == '(') {
-                s.push(ch);
+                괄호체크용스택.push(ch);
             }
             else if(ch == ')') {
-                s.pop();
+                괄호체크용스택.pop();
                 answer++;
             }
         }
