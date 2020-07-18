@@ -4,7 +4,7 @@ package practice.Q2.incheol;
 /**
  * @author Incheol Jung
  */
-public class Q2Solution {
+public class Solution {
 
     public int[] dailyTemperaturesOrigin(int[] T) {
         int[] results = new int[T.length];
@@ -41,7 +41,7 @@ public class Q2Solution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
-        Q2Solution sol = new Q2Solution();
+        Solution sol = new
 
         int[] results = sol.dailyTemperatures(arr);
 
