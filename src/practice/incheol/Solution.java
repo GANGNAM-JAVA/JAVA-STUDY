@@ -2,6 +2,7 @@ package practice.incheol;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Incheol Jung
@@ -36,9 +37,16 @@ public class Solution {
             countMap.put(beginCharArr[i] ,countMap.getOrDefault(beginCharArr[i], 0) + 1);
             countMap.put(targetCharArr[i] ,countMap.getOrDefault(targetCharArr[i], 0) - 1);
         }
+//        Integer Zero = new Integer(0);
+//        return !countMap.entrySet().stream()
+//                .anyMatch(charCount -> !charCount.getValue().equals(Zero));
 
-        return !countMap.entrySet().stream()
-                .anyMatch(charCount -> charCount.getValue() != 0);
+        for (Map.Entry<Character, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
