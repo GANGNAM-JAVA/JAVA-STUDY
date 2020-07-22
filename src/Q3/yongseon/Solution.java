@@ -1,3 +1,5 @@
+package Q3.yongseon;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class Solution {
 		return this.getDeployDayCount(workDayList);
 	}
 
-	// ÇØ´ç ¹èÆ÷ÀÏ ¹èÆ÷°³¼ö 
+	// ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	private int[] getDeployDayCount(List<Integer> workDayList) {
 		List<Integer> answer = new ArrayList<Integer>();
 		for (int index = 0; index < workDayList.size(); index++) {
@@ -17,8 +19,8 @@ public class Solution {
 			int saveIndex = index;
 			
 			for (int subIndex = index + 1; subIndex < workDayList.size(); subIndex++) {
-				// ÀÛ¾÷ÀÌ ³¡³µ¾îµµ ÀÌÀü ÀÛ¾÷ÀÌ ¿Ï·á »óÅÂ°¡ ¾Æ´Ï¸é ¹èÆ÷ ºÒ°¡
-				// ´ÙÀ½ ÀÛ¾÷ÀÌ ÇöÀç ÀÛ¾÷º¸´Ù Å©Áö ¾ÊÀº°æ¿ì¸¸ ÇÑ¹øÀÇ ¹èÆ÷ÀÏ·Î ¹­¾î Ã³¸® 
+				// ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½îµµ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¸¸ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ 
 				if (workDayList.get(index) < workDayList.get(subIndex)) {
 					break;
 				} else {
@@ -33,7 +35,7 @@ public class Solution {
 		return answer.stream().mapToInt(Integer::intValue).toArray();
 	}
 
-	// ÀÛ¾÷¼Ò¿äÀÏ °è»ê
+	// ï¿½Û¾ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	private List<Integer> calculateWorkDay(List<Integer> workDayList, int[] progresses, int[] speeds) {
 		for (int index = 0; index < progresses.length; index++) {
 			int endDay = (100 - progresses[index]) % speeds[index] == 0 ? (100 - progresses[index]) / speeds[index]
