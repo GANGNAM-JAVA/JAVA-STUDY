@@ -1,4 +1,4 @@
-package practice.incheol;
+package practice.Q1.incheol;
 
 import java.util.Arrays;
 import java.util.HashMap;
