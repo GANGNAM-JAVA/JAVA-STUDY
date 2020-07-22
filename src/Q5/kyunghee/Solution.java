@@ -1,3 +1,5 @@
+package Q5.kyunghee;
+
 import java.util.*;
 
 class Solution {
