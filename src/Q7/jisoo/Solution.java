@@ -18,7 +18,7 @@ class Solution {
             String domainName = email.substring(index1);
 
             // . 문자 제거
-            localName = localName.replaceAll("\\.", ""); // '.' 제거
+            localName = localName.replace(".", ""); // 모든 '.' 제거
 
             // + 뒤의 문자는 제외.
             int index2 = localName.indexOf('+'); // '+'가 2개 이상이더라고 맨 앞에 인덱스만 찾고 지우면 됨.
