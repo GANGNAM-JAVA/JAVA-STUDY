@@ -11,25 +11,25 @@ public class Solution {
     }
     public static int solution(String arrangement) {
         int answer = 0;
-        Stack<Character> ê´„í˜¸ì²´í¬ìš©ìŠ¤íƒ = new Stack<>();
+        Stack<Character> °ıÈ£Ã¼Å©¿ë½ºÅÃ = new Stack<>();
         for(int i=0 ; i<arrangement.length() ; i++) {
             char ch = arrangement.charAt(i);
 
-            // iê°€ ë§ˆì§€ë§‰ ë ìš”ì†Œê°€ ì•„ë‹ˆê³ , ë°”ë¡œ ë‹¤ìŒ ìš”ì†Œê°€ ')'ì´ë©´ ë ˆì´ì € ì²˜ë¦¬
+            // i°¡ ¸¶Áö¸· ³¡ ¿ä¼Ò°¡ ¾Æ´Ï°í, ¹Ù·Î ´ÙÀ½ ¿ä¼Ò°¡ ')'ÀÌ¸é ·¹ÀÌÀú Ã³¸®
             if(i < arrangement.length() - 1) {
                 char ch2 = arrangement.charAt(i+1);
                 if(ch == '(' && ch2 == ')') {
-                    answer += ê´„í˜¸ì²´í¬ìš©ìŠ¤íƒ.size();
+                    answer += °ıÈ£Ã¼Å©¿ë½ºÅÃ.size();
                     i++;
                     continue;
                 }
             }
 
             if(ch == '(') {
-                ê´„í˜¸ì²´í¬ìš©ìŠ¤íƒ.push(ch);
+                °ıÈ£Ã¼Å©¿ë½ºÅÃ.push(ch);
             }
             else if(ch == ')') {
-                ê´„í˜¸ì²´í¬ìš©ìŠ¤íƒ.pop();
+                °ıÈ£Ã¼Å©¿ë½ºÅÃ.pop();
                 answer++;
             }
         }
