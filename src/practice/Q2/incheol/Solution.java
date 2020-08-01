@@ -41,7 +41,7 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
-        Solution sol = new
+        Solution sol = new Solution();
 
         int[] results = sol.dailyTemperatures(arr);
 
