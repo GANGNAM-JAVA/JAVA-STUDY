@@ -2,6 +2,10 @@ package Q8.jisoo;
 
 import java.util.Stack;
 
+/*
+Runtime: 2 ms, faster than 94.77% of Java online submissions for Baseball Game.
+Memory Usage: 39.2 MB, less than 7.24% of Java online submissions for Baseball Game.
+ */
 class Solution {
     public static void main(String[] args) {
         System.out.println(calPoints(new String[]{"5","2","C","D","+"})); // 30
