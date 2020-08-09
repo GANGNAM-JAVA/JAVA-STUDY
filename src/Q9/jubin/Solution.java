@@ -1,10 +1,10 @@
-package jubin;
+package Q9.jubin;
 
 import java.util.HashMap;
 import java.util.Stack;
 
 public class Solution {
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
         HashMap<Character, Character> valid_def = new HashMap<>();
         Stack<Character> check_stack = new Stack<>();
 
@@ -27,5 +27,16 @@ public class Solution {
         }
 
         return check_stack.empty();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValid("()"));
+        System.out.println(isValid(")("));
+        System.out.println(isValid("()[]{}"));
+        System.out.println(isValid("(]"));
+        System.out.println(isValid("([)]"));
+        System.out.println(isValid("{[]}"));
+        System.out.println(isValid("(])"));
+
     }
 }
