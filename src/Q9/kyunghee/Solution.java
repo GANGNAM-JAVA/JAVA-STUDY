@@ -1,12 +1,16 @@
 class Solution {
      public boolean isValid(String s) {
+
          Stack<Character> stack = new Stack<Character>();
 
          for(char c : s.toCharArray()) {
+
              if (isOpenSymbol(c)) {
                  stack.push(c);
+
              } else if (!stack.isEmpty() && isCloseSymbolAndCounterpart (c, stack.peek())) {
                  stack.pop();
+
              } else {
                  return false;
              }
