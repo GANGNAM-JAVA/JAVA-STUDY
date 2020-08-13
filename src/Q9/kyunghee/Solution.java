@@ -5,7 +5,7 @@ class Solution {
          for(char c : s.toCharArray()) {
              if (isOpenSymbol(c)) {
                  stack.push(c);
-             } else if (!stack.isEmpty() && isCloseSymbolAndCounterpart (c, stack, stack.peek())) {
+             } else if (!stack.isEmpty() && isCloseSymbolAndCounterpart (c, stack.peek())) {
                  stack.pop();
              } else {
                  return false;
@@ -18,7 +18,7 @@ class Solution {
         return c == '(' || c == '['  || c == '{';
      }
 
-     private boolean isCloseSymbolAndCounterpart(char c, Stack<Character> stack, char peek) {
+     private boolean isCloseSymbolAndCounterpart(char c, char peek) {
            if (peek == '(' && c == ')') {
                 return true;
            } else if (peek == '[' && c == ']') {
