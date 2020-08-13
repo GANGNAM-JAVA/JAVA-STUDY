@@ -44,5 +44,6 @@ class Solution {
         Solution solution = new Solution();
 
         System.out.println(solution.solution(begin, target, words));
+
     }
 }
