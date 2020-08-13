@@ -1,3 +1,5 @@
+package Q7.jihoon;
+
 import java.util.HashSet;
 
 class Solution {
