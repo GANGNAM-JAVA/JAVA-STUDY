@@ -1,3 +1,5 @@
+package problems;
+
 public class Solution {
     private int[][] directions = {
             {1, 0},  //상
@@ -6,7 +8,7 @@ public class Solution {
             {0, 1}   //우
     };
 
-    public int execute(char[][] grid) {
+    public int numIslands(char[][] grid) {
         int count = 0;
         for (int y = 0; y < grid.length; y++) {
             for (int x = 0; x < grid[0].length; x++) {
