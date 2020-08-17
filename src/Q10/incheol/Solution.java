@@ -30,10 +30,10 @@ public class Solution {
             if(x-1 >= 0) markIsland(x-1, y, grid, visited);
             if(y+1 < grid[x].length) markIsland(x, y+1, grid, visited);
             if(y-1 >= 0) markIsland(x, y-1, grid, visited);
+            return true;
         }else{
             return false;
         }
-        return true;
     }
 
     public static void main(String[] args) {
