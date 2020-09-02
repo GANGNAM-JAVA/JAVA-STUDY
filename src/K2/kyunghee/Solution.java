@@ -1,3 +1,5 @@
+package K2.kyunghee;
+
 import java.util.*;
 
 public class Solution {

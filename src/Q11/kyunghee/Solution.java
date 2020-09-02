@@ -1,8 +1,10 @@
+package Q11.kyunghee;
+
 class Solution {
 
     public String solution(int[] numbers, String hand) {
         String answer = "";
-        String left = "*",
+        String left = "*";
         String right = "#";
 
         for(int number : numbers) {
