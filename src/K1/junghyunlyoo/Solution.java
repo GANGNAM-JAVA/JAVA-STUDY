@@ -1,3 +1,5 @@
+package K1.junghyunlyoo;
+
 class Solution {
 
     private class NumberSet {
